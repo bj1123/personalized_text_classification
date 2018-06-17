@@ -1,0 +1,250 @@
+
+<!-- saved from url=(0022)http://internet.e-mail -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title> Personalized Text Classifier </title>
+
+	
+<script language='javascript' type='text/javascript'>
+	function goServlet(form){	
+
+		form.action = "ResultServlet";
+		form.method = "post";
+		form.submit();
+		
+		var str = form.hidden.value;
+		document.getElementById("uploadTest").disabled = true;
+		document.getElementById("query").disabled = true;
+		document.getElementById("EPEClassifier").disabled = true;
+		
+		if(str == "01"){			
+			document.getElementById("bt").value = "Processing.." ;
+			document.getElementById("bt").disabled = true;					
+			
+		}else if(str == "02"){			
+			document.getElementById("bt").disabled = true;				
+			document.getElementById("bt2").value = "Processing.." ;
+					
+		}
+	}
+	
+	
+</script>	
+
+
+
+
+<link href="basic.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+@import url("basic.css");
+
+.style2 {
+	color: #000000
+}
+
+.style4 {
+	color: #FF0000
+}
+-->
+</style>
+</head>
+
+<body leftmargin="0" topmargin="0">
+	<table width="900" border="0" align="center" cellpadding="0"
+		cellspacing="0">
+		<!--DWLayoutTable-->
+		<tr>
+			<td height="120" colspan="5" valign="top"><table width="100%"
+					border="0" cellpadding="0" cellspacing="0">
+					<!--DWLayoutTable-->
+					<tr>
+						<td height="75" colspan="3" valign="top">
+							<!--DWLayoutEmptyCell-->&nbsp;
+						</td>
+					</tr>
+					<tr>
+						<td width="30" rowspan="2" valign="top">
+							<!--DWLayoutEmptyCell-->&nbsp;
+						</td>
+						<td width="840" height="30" valign="top"><table width="99%"
+								border="0" cellpadding="0" cellspacing="0">
+								<!--DWLayoutTable-->
+								<tr>
+									<td width="122" height="30" valign="top">
+										<!--DWLayoutEmptyCell-->&nbsp;
+									</td>
+									<td width="122" valign="top">
+										<!--DWLayoutEmptyCell-->&nbsp;
+									</td>
+									<td width="122" valign="top">
+										<!--DWLayoutEmptyCell-->&nbsp;
+									</td>
+									<td width="122" valign="top">
+										<!--DWLayoutEmptyCell-->&nbsp;
+									</td>
+									<td width="122" valign="top">
+										<!--DWLayoutEmptyCell-->&nbsp;
+									</td>
+									<td width="122" valign="top">
+										<!--DWLayoutEmptyCell-->&nbsp;
+									</td>
+									<td width="119" valign="top">
+										<!--DWLayoutEmptyCell-->&nbsp;
+									</td>
+								</tr>
+							</table></td>
+						<td width="30" rowspan="2" valign="top">
+							<!--DWLayoutEmptyCell-->&nbsp;
+						</td>
+					</tr>
+					<tr>
+						<td height="15" valign="top">
+							<!--DWLayoutEmptyCell-->&nbsp;
+						</td>
+					</tr>
+				</table></td>
+		</tr>
+		<tr>
+			<td width="30" rowspan="2" valign="top">
+				<!--DWLayoutEmptyCell-->&nbsp;
+			</td>
+			<td width="20" rowspan="2" valign="top"><table width="100%"
+					border="0" cellpadding="0" cellspacing="0">
+					<!--DWLayoutTable-->
+					<tr>
+						<td width="20" height="320">&nbsp;</td>
+					</tr>
+				</table></td>
+			<td width="199" height="20">&nbsp;</td>
+			<td colspan="2" valign="top"><table width="100%" border="0"
+					cellpadding="0" cellspacing="0">
+					<!--DWLayoutTable-->
+					<tr>
+						<td width="650" height="20">&nbsp;</td>
+					</tr>
+				</table></td>
+		</tr>
+		<tr>
+			<td colspan="2" rowspan="2" valign="top"><table width="100%"
+					border="0" cellpadding="0" cellspacing="0">
+					<!--DWLayoutTable-->
+					<tr>
+						<td width="845" height="150" valign="top"
+							class="lucida_sans_unicode_13" align="left"><p
+								align="center" class="lucida_sans_unicode_13">
+<strong><H3 align="center"> Personalized Text Classifier </H3></strong>
+
+							</p>
+							<p align="center" class="lucida_sans_unicode_13">
+								<span class="lucida_sans_unicode_12"> </span><strong><br>
+								</strong><span class="lucida_sans_unicode_12"><br> </span>
+							</p>
+							<blockquote>
+								<p align="justify">
+									<strong class="lucida_sans_unicode_13"></strong><span
+										class="lucida_sans_unicode_13"><br> </span>
+								</p>
+<label>Select interests </label>
+<br>
+<select name="interests">
+<option value="entertainment">entertainment</option>
+<option value="business">business</option>
+<option value="social issue">social issue</option>
+<option value="health">health</option>
+<option value="sports">sports</option>
+<option value="feminism">feminism</option>
+<option value="money">money</option>
+<option value="work">work</option>
+<option selected="selected" value="politics">politics</option>
+</select>
+<br><br>
+
+								
+								<form method="post" action="ResultServlet" accept-charset="UTF-8" name="form1">
+										
+									<label>Input text: </label>
+
+									<textarea style="width: 100%; height: 200px;" name="query" id="query"></textarea>
+
+																		
+									<input name = "hidden" type="hidden" value = "01">
+									<input id = "bt" type="button" class="lucida_sans_unicode_11" value="Run" onclick="goServlet(this.form);">
+								</form>
+
+									<br>
+
+								
+
+								</p>
+								<p>&nbsp;</p>
+							</blockquote></td>
+					</tr>
+
+
+				</table></td>
+			<td width="20" height="300" valign="top"><table width="100%"
+					border="0" cellpadding="0" cellspacing="0">
+					<!--DWLayoutTable-->
+					<tr>
+						<td width="20" height="300">&nbsp;</td>
+					</tr>
+				</table></td>
+		</tr>
+
+
+
+
+
+
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td height="50" colspan="5" valign="top"><table width="100%"
+					border="0" cellpadding="0" cellspacing="0">
+					<!--DWLayoutTable-->
+					<tr>
+						<td width="110" rowspan="2" valign="top">
+							<!--DWLayoutEmptyCell-->&nbsp;
+						</td>
+						<!--<td width="753" height="25" align="center" valign="middle"
+							class="lucida_sans_unicode_12 style4"><span
+							class="lucida_sans_unicode_12">Last Update: Nov. 2017.
+								</span></td>
+						<td width="37" rowspan="2" valign="top">-->
+							<!--DWLayoutEmptyCell-->&nbsp;
+						</td>
+					</tr>
+					<tr>
+						<td height="25" align="center" valign="middle"
+							class="lucida_sans_unicode_12">
+							<div align="right" class="arial_12 style2">
+								<div align="left" class="lucida_sans_unicode_12"><H4>Datasets used in our submission are available <a href="Dataset.zip">here</a>.</H4></div>
+							</div>
+						</td>
+					</tr>
+	
+				</table></td>
+		</tr>
+		<tr>
+			<td height="1"></td>
+			<td></td>
+			<td></td>
+			<td width="631"></td>
+			<td></td>
+		</tr>
+	</table>
+</body>
+</html>
+

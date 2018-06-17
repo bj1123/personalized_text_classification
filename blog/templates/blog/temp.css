@@ -1,0 +1,26 @@
+form {
+    /* Just to center the form on the page */
+    margin: 0 auto;
+    width: 800px;
+    /* To see the outline of the form */
+    padding: 1em;
+    border-radius: 1em;
+}
+.button {
+    /* To position the buttons to the same position of the text fields */
+    padding-left: 90px; /* same size as the label elements */
+}
+
+textarea {
+    /* To properly align multiline text fields with their labels */
+    vertical-align: top;
+
+    /* To give enough room to type some text */
+    height: 20em;
+    width: 50em;
+
+
+    /* To allow users to resize any textarea vertically
+       It does not work on every browsers */
+    resize: vertical;
+}
